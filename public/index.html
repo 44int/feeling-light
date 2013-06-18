@@ -19,5 +19,22 @@
   <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/js/bootstrap.min.js"></script>
   <script src="/socket.io/socket.io.js"></script>
   <script src="/javascripts/chat.js"></script>
+  <script src="/javascripts/jquery.jplayer.min.js"></script>
+
+  <div id="jplayer" class="jp-jplayer"></div>
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $("#jplayer").jPlayer({
+            ready: function () {
+                $(this).jPlayer("setMedia", {
+                    mp3: "bgm/pon.mp3"
+                });
+            },
+            swfPath: "js"
+        });
+    });
+  </script>
+
 </body>
 </html>

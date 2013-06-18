@@ -1,6 +1,7 @@
 var socket = io.connect();
 socket.on('message:receiveWithColor', function (data) {
 	colorWithAnimate(data.message);
+	$('#jplayer').jPlayer('play');
 });
 
 function sendWithColor(color) {
